@@ -1,0 +1,26 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "common function collection ",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/song111/utils.git"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "chrissong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/song111/utils/issues"
+  },
+  "homepage": "https://github.com/song111/utils#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
