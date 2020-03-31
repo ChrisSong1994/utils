@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "common function collection ",
   "main": "lib/index.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc -p ./tsconfig.json"
@@ -23,5 +25,8 @@
   "homepage": "https://github.com/song111/utils#readme",
   "devDependencies": {
     "typescript": "^3.8.3"
+  },
+  "directories": {
+    "test": "test"
   }
 }
