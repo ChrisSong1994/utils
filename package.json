@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "common function collection ",
   "main": "lib/index.js",
+  "files": ["lib"],
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc -p ./tsconfig.json"
