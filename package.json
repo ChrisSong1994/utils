@@ -1,5 +1,5 @@
 {
-  "name": "utils",
+  "name": "@chrissong/utils",
   "version": "1.0.0",
   "description": "common function collection ",
   "main": "lib/index.js",
