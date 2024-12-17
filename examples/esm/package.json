@@ -1,0 +1,20 @@
+{
+  "name": "react-ts-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "quick serve",
+    "build": "quick build"
+  },
+  "dependencies": {
+    "@fett/utils": "file:../../",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@fett/quick-cli": "^0.0.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.2"
+  }
+}
