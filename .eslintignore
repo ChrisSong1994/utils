@@ -1,0 +1,7 @@
+.eslintrc.js
+node_modules
+server
+examples
+dist
+scripts
+.eslintrc
