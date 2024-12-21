@@ -17,7 +17,7 @@ export default [
     output: {
       file: `dist/index.js`,
       format: "umd",
-      name: "npmPackageTemplate",  // 全局对象名称
+      name: "npmPackageTemplate", // 全局对象名称
     },
   },
   {
@@ -26,6 +26,14 @@ export default [
     output: {
       file: `dist/index.esm.js`,
       format: "esm",
+    },
+  },
+  {
+    input: `src/index.ts`,
+    plugins: [esbuild()],
+    output: {
+      file: `dist/index.cjs.js`,
+      format: "commonjs",
     },
   },
   {
