@@ -1,11 +1,10 @@
 {
   "name": "@fett/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "js utils",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "type": "module",
   "author": "chrissong1994 <18557511748@163.com>",
   "license": "MIT",
   "bugs": {
