@@ -3,3 +3,4 @@
  */
 
 export * from "./getDateObject";
+export * from "./getDateRange";
