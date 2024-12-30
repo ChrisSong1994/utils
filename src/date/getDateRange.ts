@@ -12,10 +12,13 @@ export enum DateRangeTypeEnum {
   "one-week" = "one-week",
   "week" = "week",
   "last-week" = "last-week",
-  "thirty-day" = "thirty-day",
   "seven-day" = "seven-day",
+  "thirty-day" = "thirty-day",
   "month" = "month",
   "last-month" = "last-month",
+  "three-month" = "three-month",
+  "six-month" = "six-month",
+  "twelve-month" = "twelve-month",
 }
 
 export const DATE_RANGE_TYPE_OPTIONS = [
@@ -141,6 +144,33 @@ export const DATE_RANGE_TYPE_OPTIONS = [
     time: () => {
       const date = dayjs().subtract(1, "month");
       return [date.startOf("month"), date.endOf("month")];
+    },
+  },
+  {
+    value: DateRangeTypeEnum["three-month"],
+    label: "3个月",
+    refresh: false,
+    time: () => {
+      const date = dayjs().subtract(3, "month");
+      return [date.startOf("month"), dayjs()];
+    },
+  },
+  {
+    value: DateRangeTypeEnum["three-month"],
+    label: "6个月",
+    refresh: false,
+    time: () => {
+      const date = dayjs().subtract(6, "month");
+      return [date.startOf("month"), dayjs()];
+    },
+  },
+  {
+    value: DateRangeTypeEnum["twelve-month"],
+    label: "12个月",
+    refresh: false,
+    time: () => {
+      const date = dayjs().subtract(12, "month");
+      return [date.startOf("month"), dayjs()];
     },
   },
 ];

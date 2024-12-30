@@ -4,7 +4,10 @@
 import { isEmpty } from "../lang";
 const parse = (url) => {
   const urlObj = new URL(url);
-  const params = Object.fromEntries(urlObj.searchParams.entries());
+  const params: Record<string, string> = {};
+  urlObj.searchParams.forEach((value, key) => {
+    params[key] = value;
+  });
   return params;
 };
 

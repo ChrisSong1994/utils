@@ -6,3 +6,4 @@ export * from "./to";
 export * from "./request";
 export * from "./parallelToSerial";
 export * from "./getStrLength";
+export * from "./waterMark";
