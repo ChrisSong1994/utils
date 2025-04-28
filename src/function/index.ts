@@ -7,3 +7,4 @@ export * from "./request";
 export * from "./parallelToSerial";
 export * from "./getStrLength";
 export * from "./waterMark";
+export * from "./genId";
