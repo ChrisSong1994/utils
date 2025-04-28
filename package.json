@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:ChrisSong1994/utils.git"
+    "url": "git+ssh://git@github.com/ChrisSong1994/utils.git"
   },
   "keywords": [
     "npm",
