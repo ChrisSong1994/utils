@@ -1,12 +1,16 @@
 import "./App.css";
 
-import { copyToClipboard } from "@fett/utils";
+import { copyToClipboard ,genUUID,genRandomStringId,genTimeBasedId} from "@fett/utils";
 
 // @ts-ignore
 import ReactLogo from "./assets/react.svg?component";
 // @ts-ignore
 import styles from "./index.module.css";
 const App = () => {
+
+  console.log(genUUID())
+  console.log(genRandomStringId(10))
+  console.log(genTimeBasedId(10))
   return (
     <div className="content">
       <div style={{ margin: "12px auto;" }}>
