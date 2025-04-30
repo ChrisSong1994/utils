@@ -26,7 +26,7 @@
     "publish": "npm publish --access public",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "prepare": "husky"
+    "prepare": "husky && husky install"
   },
   "repository": {
     "type": "git",
@@ -38,14 +38,17 @@
     "template",
     "rollup"
   ],
-  "gitHooks": {
-    "pre-commit": "lint-staged",
-    "commit-msg": "node  scripts/verify-commit-msg.js"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "node  scripts/verify-commit-msg.js"
+    }
   },
   "lint-staged": {
     "src/**/*.ts?(x)": [
       "npm run format"
-    ]
+    ],
+    "*.lint": "prettier --write"
   },
   "dependencies": {
     "dayjs": "^1.11.13"
