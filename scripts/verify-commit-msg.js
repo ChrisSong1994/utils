@@ -6,6 +6,8 @@ import fs from "fs";
 const msgPath = process.env.GIT_PARAMS;
 const msg = fs.readFileSync(msgPath, "utf-8").trim();
 
+console.log("执行 commit-msg 钩子");
+
 const commitRE =
   /^(v\d+\.\d+\.\d+(-(alpha|beta|rc.\d+))?)|((revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|types)(\(.+\))?!?: .{1,50})/;
 
