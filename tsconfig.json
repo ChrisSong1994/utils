@@ -10,8 +10,9 @@
     "outDir": "./dist",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": ["vitest/globals"]
   },
-  "include": ["src/**/*", "package.json"],
-  "exclude": ["node_modules", "**/*.spec.ts", "./dist/*"]
+  "include": ["src/**/*", "package.json", "tests/**/*"],
+  "exclude": ["node_modules", "./dist/*"]
 }
