@@ -2,12 +2,16 @@
  * url 工具：解析、拼接等
  */
 import { isEmpty } from "../lang";
-const parse = (url) => {
-  const urlObj = new URL(url);
+const parse = (url: string) => {
   const params: Record<string, string> = {};
-  urlObj.searchParams.forEach((value, key) => {
-    params[key] = value;
-  });
+  try {
+    const urlObj = new URL(url);
+    urlObj.searchParams.forEach((value, key) => {
+      params[key] = value;
+    });
+  } catch (err) {
+    console.warn(err?.message);
+  }
   return params;
 };
 
