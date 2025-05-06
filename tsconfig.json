@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "module": "esnext",
-    "lib": ["ESNext", "dom"],
+    "lib": ["ESNext", "dom", "dom.iterable"],
     "moduleResolution": "node",
     "declaration": true, // 启用类型声明文件的生成
     "sourceMap": true,

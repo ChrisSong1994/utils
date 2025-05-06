@@ -2,16 +2,36 @@
  * url 工具：解析、拼接等
  */
 import { isEmpty } from "../lang";
-const parse = (url: string) => {
+import { splitOnFirst } from "../function";
+
+/**
+ * @param input: string   url or query string
+ */
+const parse = (input: string) => {
   const params: Record<string, string> = {};
-  try {
-    const urlObj = new URL(url);
-    urlObj.searchParams.forEach((value, key) => {
-      params[key] = value;
-    });
-  } catch (err) {
-    console.warn(err?.message);
+  if (typeof input !== "string") {
+    return params;
   }
+
+  // url
+  if (URL.canParse(input)) {
+    const urlObj = URL.parse(input);
+    for (const [key, value] of urlObj.searchParams.entries()) {
+      params[key] = value;
+    }
+  }
+  // query string
+  else {
+    const query = input.trim().replace(/^[?#&]/, ""); // 去除开头的 ? # &
+    for (const parameter of query.split("&")) {
+      if (parameter === "") {
+        continue;
+      }
+      const [key, value] = splitOnFirst(parameter, "=");
+      params[key] = value;
+    }
+  }
+
   return params;
 };
 

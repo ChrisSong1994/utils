@@ -8,3 +8,4 @@ export * from "./parallelToSerial";
 export * from "./getStrLength";
 export * from "./waterMark";
 export * from "./genId";
+export * from "./splitOnFirst";
