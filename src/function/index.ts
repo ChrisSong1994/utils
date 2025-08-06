@@ -9,3 +9,5 @@ export * from "./getStrLength";
 export * from "./waterMark";
 export * from "./genId";
 export * from "./splitOnFirst";
+export * from "./rafInterval";
+export * from "./rafTimeout";

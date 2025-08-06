@@ -17,3 +17,4 @@ export * from "./lang";
 export * from "./platform";
 export * from "./navigator";
 export * from "./url";
+export * from "./string";
