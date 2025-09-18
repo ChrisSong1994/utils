@@ -1,6 +1,6 @@
 {
   "name": "@fett/utils",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "js utils",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -23,7 +23,7 @@
     "prettier": "prettier --write 'src/**/*.ts'",
     "format": "npm run prettier && npm run lint",
     "prepublish": "npm run build",
-    "publish": "npm publish --access public",
+    "pub": "npm publish --access public",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "prepare": "husky && husky install"
