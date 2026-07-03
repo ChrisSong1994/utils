@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { isArrayLike } from "../../";
+import { isArrayLike } from "../../src";
 
 describe("isArrayLike", () => {
   test("should return true for arrays", () => {

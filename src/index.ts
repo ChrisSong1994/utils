@@ -18,3 +18,8 @@ export * from "./platform";
 export * from "./navigator";
 export * from "./url";
 export * from "./string";
+export * from "./array";
+export * from "./object";
+export * from "./number";
+export * from "./storage";
+export * from "./format";

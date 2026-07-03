@@ -4,5 +4,8 @@
  * MSStream是IE11中的一个对象
  */
 export const isIOS = (): boolean => {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window["MSStream"];
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) &&
+    !(window as unknown as Record<string, unknown>)["MSStream"]
+  );
 };

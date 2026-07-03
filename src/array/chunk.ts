@@ -1,0 +1,12 @@
+/**
+ * 按固定大小切分数组
+ * @param arr 原数组
+ * @param size 每块大小
+ */
+export const chunk = <T>(arr: T[], size: number): T[][] => {
+  const result: T[][] = [];
+  for (let i = 0; i < arr.length; i += size) {
+    result.push(arr.slice(i, i + size));
+  }
+  return result;
+};

@@ -3,7 +3,7 @@
     "target": "ES2015",
     "module": "esnext",
     "lib": ["ESNext", "dom", "dom.iterable"],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "declaration": true, // 启用类型声明文件的生成
     "sourceMap": true,
     "rootDir": "src",

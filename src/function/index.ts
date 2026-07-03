@@ -11,3 +11,8 @@ export * from "./genId";
 export * from "./splitOnFirst";
 export * from "./rafInterval";
 export * from "./rafTimeout";
+export * from "./sleep";
+export * from "./retry";
+export * from "./throttle";
+export * from "./memoize";
+export * from "./fileDownload";

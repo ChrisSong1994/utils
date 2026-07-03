@@ -17,7 +17,7 @@ const copyByExecCommand = (text: string) => {
       textArea.remove();
       resolve(true);
     } catch (error) {
-      console.error("copyByExecCommand error", error.message);
+      console.error("copyByExecCommand error", (error as Error).message);
       resolve(false);
     } finally {
       textArea.remove();
@@ -33,12 +33,12 @@ async function copyByClipboard(text: string) {
         .then(() => {
           resolve(true);
         })
-        .catch((error) => {
+        .catch((error: Error) => {
           console.error("copyByClipboard error", error.message);
           reject(false);
         });
     } catch (error) {
-      console.error("copyByClipboard error", error.message);
+      console.error("copyByClipboard error", (error as Error).message);
       reject(false);
     }
   });

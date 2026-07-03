@@ -25,13 +25,13 @@ function pad(num: number | string): string {
 }
 
 function createWaterMark(options: waterMarkOptions) {
-  const [width, height] = options.size;
+  const [width, height] = options.size ?? [0, 0];
   const time = waterMarkTime();
   const canvas = document.createElement("canvas");
   canvas.width = width;
   canvas.height = height;
 
-  const ctx = canvas.getContext("2d");
+  const ctx = canvas.getContext("2d")!;
   const cx = width / 2;
   const cy = height / 2;
 
@@ -45,7 +45,7 @@ function createWaterMark(options: waterMarkOptions) {
   ctx.save();
   ctx.translate(cx, cy);
   // 旋转
-  ctx.rotate((Math.PI / 180) * options.angle);
+  ctx.rotate((Math.PI / 180) * (options.angle ?? -30));
   // 平移回原点
   ctx.translate(-cx, -cy);
   ctx.fillText(options.text, width / 2.5, height / 2 - 20);
@@ -100,8 +100,8 @@ function createWaterMarkInstance(options: waterMarkOptions) {
 
   mutationObserver.observe(document.body, mutationObserverConfig);
 
-  function setStyle(element) {
-    const [width, height] = size;
+  function setStyle(element: HTMLElement) {
+    const [width, height] = size ?? [0, 0];
 
     element.style.position = "fixed";
     element.style.top = "0";

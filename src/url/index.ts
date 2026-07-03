@@ -2,7 +2,7 @@
  * url 工具：解析、拼接等
  */
 import { isEmpty } from "../lang";
-import { splitOnFirst } from "../function";
+import { splitOnFirst } from "../function/splitOnFirst";
 
 /**
  * @param input: string   url or query string
@@ -15,7 +15,7 @@ const parse = (input: string) => {
 
   // url
   if (URL.canParse(input)) {
-    const urlObj = URL.parse(input);
+    const urlObj = URL.parse(input)!;
     for (const [key, value] of urlObj.searchParams.entries()) {
       params[key] = value;
     }

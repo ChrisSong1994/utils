@@ -1,7 +1,7 @@
-export function rafInterval(callback, delay: number = 0) {
+export function rafInterval(callback: () => void, delay: number = 0) {
   let startTime = performance.now();
   let accumulatedTime = 0;
-  let requestId;
+  let requestId: number;
 
   function tick(currentTime: DOMHighResTimeStamp) {
     const deltaTime = currentTime - startTime;

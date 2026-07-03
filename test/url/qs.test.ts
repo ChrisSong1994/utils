@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { qs } from "../../";
+import { qs } from "../../src";
 
 describe("qs", () => {
   test("qs.parse", () => {

@@ -1,5 +1,5 @@
 export function rafTimeout(callback: () => void, delay: number = 0) {
-  let requestId;
+  let requestId: number;
   const start = performance.now();
   function tick(currentTime: DOMHighResTimeStamp) {
     const elapsed = currentTime - start;

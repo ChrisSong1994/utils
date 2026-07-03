@@ -11,6 +11,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 
 const isProd = process.env.NODE_ENV === "production";
+const external = ["dayjs", "dayjs/plugin/duration.js"];
 
 export default [
   {
@@ -29,22 +30,27 @@ export default [
       file: `dist/index.umd.min.js`,
       format: "umd",
       name: "FettUtils", // 全局对象名称
+      sourcemap: true,
     },
   },
   {
     input: `src/index.ts`,
+    external,
     plugins: [esbuild()],
     output: {
       file: `dist/index.esm.js`,
       format: "esm",
+      sourcemap: true,
     },
   },
   {
     input: `src/index.ts`,
+    external,
     plugins: [esbuild()],
     output: {
       file: `dist/index.cjs.js`,
       format: "commonjs",
+      sourcemap: true,
     },
   },
   {
